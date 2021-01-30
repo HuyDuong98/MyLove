@@ -4,7 +4,7 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
+    <title>Beautiful Memory</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' href='src/css/owl.carousel.min.css'>
     <link rel='stylesheet' type='text/css' href='src/css/owl.theme.default.min.css'>
@@ -131,6 +131,11 @@
             right: 43%;
             font-size: 14px;
         }
+
+        .owl-theme .owl-nav {
+            margin-top: 0;
+            height: 0;
+        }
     </style>
 </head>
 
@@ -159,10 +164,12 @@
                 });
             }
         });
+
+
         $(document).ready(function () {
             $('.owl-carousel').owlCarousel({
                 loop: true,
-                dots:false,
+                dots: false,
                 nav: true,
                 navText: ["<div class='prev-owl'>PREV</div>", "<div class='next-owl'>NEXT</div>"],
                 items: 1,
@@ -172,40 +179,6 @@
                 autoplayHoverPause: true
             });
         });
-
-        // var fileNames = new Array();
-        // $.ajax({
-        //     url: "Images/",
-        //     // headers: {  'Access-Control-Allow-Origin': 'file:///D:/09.01.2021/Images' },
-        //     success: function (data) {
-        //         console.log(data);
-        //         $(data).find("td > a").each(function () {
-        //             if (openFile($(this).attr("href"))) {
-        //                 fileNames.push($(this).attr("href"));
-        //             }
-        //         });
-        //     }
-        // });
-        // console.log(fileNames);
-        // function openFile(file) {
-        //     var extension = file.substr((file.lastIndexOf('.') + 1));
-        //     switch (extension) {
-        //         case 'jpg':
-        //         case 'png':
-        //         case 'gif':   // the alert ended with pdf instead of gif.
-        //         case 'zip':
-        //         case 'rar':
-        //         case 'pdf':
-        //         case 'php':
-        //         case 'doc':
-        //         case 'docx':
-        //         case 'xls':
-        //         case 'xlsx':
-        //             return true;
-        //         default:
-        //             return false;
-        //     }
-        // };
     </script>
 </body>
 
