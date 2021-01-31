@@ -181,7 +181,7 @@ body {
 }
 
 #app-cover {
-    width: 430px;
+    max-width: 430px;
     height: 100px;
     margin: -4px auto;
 }
@@ -502,4 +502,29 @@ body {
         right: 10%;
     }
 
+    #album-art {
+        top: 20px;
+        width: 50px;
+        height: 50px;
+        margin-left: 20px;
+    }
+
+    #album-art::before {
+        width: 15px;
+        height: 15px;
+        margin: -7.5px auto 0 auto;
+    }
+
+
+    #player-track {
+        padding: 13px 22px 10px 70px;
+    }
+
+    #player-controls.active {
+        width: 250px;
+        height: 100%;
+        margin: auto;
+        float:none;
+        overflow: hidden;
+    }
 }

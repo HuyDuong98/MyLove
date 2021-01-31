@@ -1,6 +1,6 @@
 $(function()
 {
-    var playerTrack = $("#player-track"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false,
+    var playerTrack = $("#player-track"),playerControls = $("#player-controls"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false,
      albums = ['3107','Nàng Thơ','Electro Boy','Home','Proxy (Original Mix)'], 
      trackNames = ['W/n, Duongg, Nâu','Hoàng Dũng','Phố Cũ Còn Anh','Jordan Schor - Home','Martin Garrix - Proxy'], 
     albumArtworks = ['_1','_2','_3','_4','_5'], 
@@ -20,6 +20,7 @@ $(function()
             {
                 playerTrack.addClass('active');
                 albumArt.addClass('active');
+                playerControls.addClass('active');
                 checkBuffering();
                 i.attr('class','fas fa-pause');
                 audio.play();
@@ -28,6 +29,7 @@ $(function()
             {
                 playerTrack.removeClass('active');
                 albumArt.removeClass('active');
+                playerControls.removeClass('active');
                 clearInterval(buffInterval);
                 albumArt.removeClass('buffering');
                 i.attr('class','fas fa-play');
