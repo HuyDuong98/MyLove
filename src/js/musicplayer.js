@@ -238,6 +238,8 @@ $(function()
 
         playPreviousTrackButton.on('click',function(){ selectTrack(-1);} );
         playNextTrackButton.on('click',function(){ selectTrack(1);});
+
+        $("#play-pause-button").click();
 	}
     
 	initPlayer();

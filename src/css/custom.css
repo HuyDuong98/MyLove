@@ -59,10 +59,6 @@ body {
 }
 
 .container-fluid {
-    /* display: flex;
-    align-items: center;
-    justify-content: center; */
-    height: 100vh;
     margin: 0;
 }
 
@@ -185,6 +181,9 @@ body {
     max-width: 430px;
     height: 100px;
     margin: -4px auto;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
 }
 
 #bg-artwork {
@@ -439,7 +438,7 @@ body {
 #player-controls {
     width: 250px;
     height: 100%;
-    margin: 0 5px 0 141px;
+    margin: 0 25px 0 141px;
     float: right;
     overflow: hidden;
 }
@@ -494,6 +493,68 @@ body {
     z-index: 125;
 }
 
+#app-cover.draggable{
+    display: none;
+}
+
+
+.btn-hide-player{
+    position:absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #ccc;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 3px 8px;
+    border-radius: 20px;
+}
+
+.btn-hide-player:hover{
+   color: #f3f3f3;
+   background-color: #ff4e4e;
+}
+
+
+
+#mydiv {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9;
+    display: none;
+  }
+  
+  #mydivheader {
+    cursor: move;
+    z-index: 10;
+    transition: 0.3s ease all;
+    box-shadow: 0 0 0 5px #fff;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 59px;
+    height: 59px;
+    position: relative;
+  }
+
+  #mydivheader img {
+    width: 100%;
+  }
+
+
+  #mydivheader::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    width:15px;
+    height: 15px;
+    margin: -7.5px auto 0 auto;
+    background-color: #d6dee7;
+    border-radius: 50%;
+    box-shadow: inset 0 0 0 2px #fff;
+    z-index: 2;
+}
 @media screen and (max-width: 768px) {
     .prev-owl {
         left: 10%;
@@ -528,4 +589,27 @@ body {
         float:none;
         overflow: hidden;
     }
+
+    #app-cover {
+        width: 100vw;
+        height: 100px;
+        margin: -4px auto;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+    }
+
+    .container {
+        height:auto;
+    }
+    
+    .btn-hide-player {
+        bottom: auto;
+        left: auto;
+        color: #f3f3f3;
+        background-color: #ff4e4e;
+        right: 10px;
+        top: -10px;
+    }
 }
+
