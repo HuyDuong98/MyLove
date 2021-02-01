@@ -1,14 +1,14 @@
 $(function()
 {
     var playerTrack = $("#player-track"),playerControls = $("#player-controls"), bgArtwork = $('#bg-artwork'), bgArtworkUrl, albumName = $('#album-name'), trackName = $('#track-name'), albumArt = $('#album-art'), sArea = $('#s-area'), seekBar = $('#seek-bar'), trackTime = $('#track-time'), insTime = $('#ins-time'), sHover = $('#s-hover'), playPauseButton = $("#play-pause-button"),  i = playPauseButton.find('i'), tProgress = $('#current-time'), tTime = $('#track-length'), seekT, seekLoc, seekBarPos, cM, ctMinutes, ctSeconds, curMinutes, curSeconds, durMinutes, durSeconds, playProgress, bTime, nTime = 0, buffInterval = null, tFlag = false,
-     albums = ['3107','Nàng Thơ','Electro Boy','Home','Proxy (Original Mix)'], 
-     trackNames = ['W/n, Duongg, Nâu','Hoàng Dũng','Phố Cũ Còn Anh','Jordan Schor - Home','Martin Garrix - Proxy'], 
+     albums = ['3107','Nàng Thơ','Phố Cũ Còn Anh','Năm Qua Đã Làm Gì','Proxy (Original Mix)'], 
+     trackNames = ['W/n, Duongg, Nâu','Hoàng Dũng','Quinn ft Chilly','Noo Phước Thịnh','Martin Garrix - Proxy'], 
     albumArtworks = ['_1','_2','_3','_4','_5'], 
     trackUrl = [
     'mp3/3-1-0-7-Duongg-Nau.mp3',
     'mp3/NangTho-HoangDung-6413381.mp3',
     'mp3/PhoCuConAnh-QuinnChilly-6791854.mp3',
-    'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/4.mp3',
+    'mp3/NamQuaDaLamGi.mp3',
     'https://raw.githubusercontent.com/himalayasingh/music-player-1/master/music/5.mp3'], 
     playPreviousTrackButton = $('#play-previous'), playNextTrackButton = $('#play-next'), currIndex = -1;
 
